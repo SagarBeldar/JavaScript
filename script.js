@@ -167,13 +167,81 @@ for (const val of marks1) {
 console.log(element1/6);*/
 
 //JS Example-05
-let Products=[250,645,300,900,50];
-let totalDisc=0
-for(i=0;i<Products.length;i++){
-    let disc_offer=Products[i]*(10/100);
-     let price=Products[i]-disc_offer;
-    totalDisc+=price;
-    console.log(`The 10% disc of ${Products[i]} is ${disc_offer} and Price after offer is ${price}`);
+// let Products=[250,645,300,900,50];
+// let totalDisc=0
+// for(i=0;i<Products.length;i++){
+//     let disc_offer=Products[i]*(10/100);
+//      let price=Products[i]-disc_offer;
+//     totalDisc+=price;
+//     console.log(`The 10% disc of ${Products[i]} is ${disc_offer} and Price after offer is ${price}`);
 
-}
-console.log(`This is total sum of 10% disc =${totalDisc}`);
+// }
+// console.log(`This is total sum of 10% disc =${totalDisc}`);
+
+//JS Example-06
+
+// let Companies=["Bloomberg","MIcrosoft","Uber","Google","IBM","Netflix"];
+// console.log(Companies);
+
+//remove first compnay from list
+// Companies.shift();
+// console.log(Companies);
+// console.log("Delete first company",Companies.splice(0,1));
+
+//remove Uber and add ola
+// Companies.splice(2,1,"OLA")
+// console.log(Companies);
+
+//Add Amazon at the end
+
+// Companies.push("Amazon");
+// console.log(Companies);
+
+// let num=10;
+// console.log(num);
+
+// let num=12;//Cannot redeclare block-scoped variable 'num'
+
+// let Mul=(a,b)=>{
+//     return a*b;
+// }
+
+// Mul=21;
+
+//JS Example-07
+ //create a function with para string and count no. of vowels in it
+
+
+ function countVowel(str) {
+    let count=0;
+    for (const char of str) {
+        // console.log(char);
+        if(char==="a" || char==="e" || char==="i" || char==="o" || char==="u")
+        count++;
+    }
+    console.log(count);
+ }
+
+ countVowel("sagarbeldara");
+
+ function countVowel_1(str1){
+    let count=0;
+    for(i=0;i<str1.length;i++){
+        if(str1[i]==="a" || str1[i]==="e" || str1[i]==="i" || str1[i]==="o" || str1[i]==="u")
+        count++;
+    }
+    console.log(count);
+ }
+
+ countVowel_1("apnacollegeaeiohg")
+
+ const noVowel=(str1)=>{
+    let count=0;
+    for(i=0;i<str1.length;i++){
+        if(str1[i]==="a" || str1[i]==="e" || str1[i]==="i" || str1[i]==="o" || str1[i]==="u")
+        count++;
+    }
+    console.log(count);
+ }
+
+ noVowel("aakashaaaaa")
