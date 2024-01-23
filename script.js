@@ -266,8 +266,21 @@ ste.forEach((str,num,strlist)=>{console.log(str.toUpperCase(),num,strlist)});*/
 
 //JS Example-08-given array print square of each value using forEach
 
-let array=[1,2,3,4,5,6,7];
+/*let array=[1,2,3,4,5,6,7];
 
 array.forEach(element => {
-    console.log(element**2);
-});
+    console.log(element**2);//(element*element)
+});*/
+
+//Filter method
+
+/*let array=[1,2,3,4,5,6,7,8];
+
+let newArray=array.filter(val=>{
+    //return val%2 !=0;
+    return val>3
+})
+
+console.log(newArray);*/
+
+//reduce method
