@@ -139,17 +139,16 @@
 // let printName= "@"+userName+userName.length;
 // console.log(printName);
 
-//for of
+//for of method -
 
-// let heroes=["spiderman","superman","hulk","thor","antman"];
+/*let heroes=["spiderman","superman","hulk","thor","antman"];
 
-// for (const hero of heroes) {
-//     console.log(hero.toUpperCase());
-// }
+for (const hero of heroes) {
+    console.log(hero.toUpperCase());
+}
 
-// for (const iterator of object) {  
-// }
-
+for (const iterator of object) {  
+}*/
 //JS Example-04
 
 /*let marks=[85,97,44,37,76,60];
@@ -166,53 +165,52 @@ for (const val of marks1) {
 }
 console.log(element1/6);*/
 
-//JS Example-05
-// let Products=[250,645,300,900,50];
-// let totalDisc=0
-// for(i=0;i<Products.length;i++){
-//     let disc_offer=Products[i]*(10/100);
-//      let price=Products[i]-disc_offer;
-//     totalDisc+=price;
-//     console.log(`The 10% disc of ${Products[i]} is ${disc_offer} and Price after offer is ${price}`);
+//JS Example-05 - calculate 10% offer on price
 
-// }
-// console.log(`This is total sum of 10% disc =${totalDisc}`);
+/*let Products=[250,645,300,900,50];
+let totalDisc=0
+for(i=0;i<Products.length;i++){
+    let disc_offer=Products[i]*(10/100);
+     let price=Products[i]-disc_offer;
+    totalDisc+=price;
+    console.log(`The 10% disc of ${Products[i]} is ${disc_offer} and Price after offer is ${price}`);
+
+}
+console.log(`This is total sum of 10% disc =${totalDisc}`);*/
 
 //JS Example-06
 
-// let Companies=["Bloomberg","MIcrosoft","Uber","Google","IBM","Netflix"];
-// console.log(Companies);
+/*let Companies=["Bloomberg","MIcrosoft","Uber","Google","IBM","Netflix"];
+console.log(Companies);
 
 //remove first compnay from list
-// Companies.shift();
-// console.log(Companies);
-// console.log("Delete first company",Companies.splice(0,1));
+Companies.shift();
+console.log(Companies);
+console.log("Delete first company",Companies.splice(0,1));
 
 //remove Uber and add ola
-// Companies.splice(2,1,"OLA")
-// console.log(Companies);
+Companies.splice(2,1,"OLA")
+console.log(Companies);
 
 //Add Amazon at the end
+Companies.push("Amazon");
+console.log(Companies);
 
-// Companies.push("Amazon");
-// console.log(Companies);
+let num=10;
+console.log(num);
 
-// let num=10;
-// console.log(num);
+let num=12;//Cannot redeclare block-scoped variable 'num'
 
-// let num=12;//Cannot redeclare block-scoped variable 'num'
+let Mul=(a,b)=>{
+    return a*b;
+}
 
-// let Mul=(a,b)=>{
-//     return a*b;
-// }
-
-// Mul=21;
+Mul=21;*/
 
 //JS Example-07
  //create a function with para string and count no. of vowels in it
 
-
- function countVowel(str) {
+ /*function countVowel(str) {
     let count=0;
     for (const char of str) {
         // console.log(char);
@@ -244,4 +242,32 @@ console.log(element1/6);*/
     console.log(count);
  }
 
- noVowel("aakashaaaaa")
+ noVowel("aakashaaaaa")*/
+
+//for Each Method -callback function 
+
+/*let array=[1,2,3,4,534,3,4,56,7,8,9];
+
+let ste=["asc","eda","fgh","ghj"];
+
+ste.forEach( function printVal(val) {
+    console.log(val.toUpperCase())
+});
+
+array.forEach( function printVal(val) {
+    console.log(val);
+})
+
+array.forEach((x,idx,list) => {
+    console.log(x,idx,list);
+});
+
+ste.forEach((str,num,strlist)=>{console.log(str.toUpperCase(),num,strlist)});*/
+
+//JS Example-08-given array print square of each value using forEach
+
+let array=[1,2,3,4,5,6,7];
+
+array.forEach(element => {
+    console.log(element**2);
+});
