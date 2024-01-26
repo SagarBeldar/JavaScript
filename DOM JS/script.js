@@ -23,7 +23,7 @@ h2=h2.innerText+ "learn with sagar beldar"
 
 console.log(h2);*/
 
-let div=document.querySelectorAll(".box");
+// let div=document.querySelectorAll(".box");
 
 // console.log(div[0]);
 
@@ -33,9 +33,42 @@ let div=document.querySelectorAll(".box");
  
 //alternative 
 
-let idx=1;
-for (const element of div) {
-    // console.log(element.innerText);
-    element.innerText=`New value of box ${idx}`;
-    idx++;
-}
+// let idx=1;
+// for (const element of div) {
+//     // console.log(element.innerText);
+//     element.innerText=`New value of box ${idx}`;
+//     idx++;
+// }
+
+
+//Events in JS
+// let btnHandler=document.querySelector("#btn");
+// console.log(btnHandler);
+
+// btnHandler.onclick=()=>{
+//     //console.log("btnclick many times");
+//     num=10;
+//     for(i=0;i<num;i++){
+//         console.log(i);
+//     }
+// }
+
+let btnHandler=document.querySelector("#btn");
+console.log(btnHandler);
+
+let lightmode="light";
+let body=document.querySelector("body");
+btnHandler.addEventListener("click",()=>{
+  if(lightmode==="light"){
+      lightmode="dark";
+    //   body.style.backgroundColor="black";
+    body.classList.add("dark");
+    body.classList.remove("light");
+   }else{
+    lightmode="light";
+    // body.style.backgroundColor="White";
+    body.classList.add("light");
+    body.classList.remove("dark");
+   }
+   console.log(lightmode);
+})
