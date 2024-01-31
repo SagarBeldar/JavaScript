@@ -53,7 +53,7 @@ console.log(h2);*/
 //     }
 // }
 
-let btnHandler=document.querySelector("#btn");
+/*let btnHandler=document.querySelector("#btn");
 console.log(btnHandler);
 
 let lightmode="light";
@@ -71,4 +71,9 @@ btnHandler.addEventListener("click",()=>{
     body.classList.remove("dark");
    }
    console.log(lightmode);
-})
+})*/
+console.log("object");
+let hello=()=>{
+  console.log("helhgkuygkufuyflo");
+}
+setTimeout(hello,4000)
