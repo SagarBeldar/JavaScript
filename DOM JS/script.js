@@ -78,6 +78,8 @@ btnHandler.addEventListener("click",()=>{
 // }
 // setTimeout(hello,4000)
 
+
+//CallBack Hell
 /*function getData(dataId,getNesxtdata){
   setTimeout(() => {
     console.log("data",dataId);
@@ -116,12 +118,21 @@ prromise.catch((err)=>{
 
 //Promise ==>2
 
-const asyncFunc=()=>{
+/* const asyncFunc=()=>{
   return new Promise((resolve,reject)=>{
     setTimeout(() => {
       console.log(" promise has pass");
-      // resolve("success")
-      reject("failure")
+       resolve("success")
+      //reject("failure")
+    }, 4000);
+  })
+}
+const asyncFunc2=()=>{
+  return new Promise((resolve,reject)=>{
+    setTimeout(() => {
+      console.log(" promise has pass");
+       resolve("success")
+     // reject("failure")
     }, 4000);
   })
 }
@@ -129,8 +140,37 @@ const asyncFunc=()=>{
 let p1=asyncFunc();
 p1.then((res)=>{
   console.log(res);
+  asyncFunc2().then((res)=>{
+    console.log(res);
+  })
 })
 
 p1.catch((err)=>{
   console.log("nework issue",err);
-})
+}) 
+
+*/
+
+async function fun1(){
+  console.log("sagar beldar");//async function always returns a promise
+}
+
+function fun2(){
+  console.log("sagar beldar");
+}
+
+function asyncFunc2(){
+  return new Promise((resolve,reject)=>{
+    setTimeout(() => {
+      console.log(" promise has pass");
+       resolve("success")
+     // reject("failure")
+    }, 4000);
+  })
+}
+
+async function asyncFunc3 (){
+  await asyncFunc2();
+  console.log("sagar hello");
+  await asyncFunc2();
+}
