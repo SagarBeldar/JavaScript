@@ -78,7 +78,7 @@ btnHandler.addEventListener("click",()=>{
 // }
 // setTimeout(hello,4000)
 
-function getData(dataId,getNesxtdata){
+/*function getData(dataId,getNesxtdata){
   setTimeout(() => {
     console.log("data",dataId);
     if(getNesxtdata){
@@ -91,4 +91,46 @@ getData(1,()=>{
   getData(2,()=>{
     getData(3);
   });
+})*/
+
+//Promise ==>1 
+console.log("object");
+/*const getPromise=()=>{
+  return new Promise((resolve,reject)=>{
+    console.log("I am Promise");
+    // resolve("Promise Fullfilled")
+    reject("network err")
+  })
+}
+
+let prromise=getPromise();
+
+prromise.then((res)=>{
+  console.log("promised done",res);
+});
+
+prromise.catch((err)=>{
+  console.log("rejected",err);
+}) */
+
+
+//Promise ==>2
+
+const asyncFunc=()=>{
+  return new Promise((resolve,reject)=>{
+    setTimeout(() => {
+      console.log(" promise has pass");
+      // resolve("success")
+      reject("failure")
+    }, 4000);
+  })
+}
+
+let p1=asyncFunc();
+p1.then((res)=>{
+  console.log(res);
+})
+
+p1.catch((err)=>{
+  console.log("nework issue",err);
 })
