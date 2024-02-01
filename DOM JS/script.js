@@ -72,8 +72,23 @@ btnHandler.addEventListener("click",()=>{
    }
    console.log(lightmode);
 })*/
-console.log("object");
-let hello=()=>{
-  console.log("helhgkuygkufuyflo");
+// console.log("object");
+// let hello=()=>{
+//   console.log("helhgkuygkufuyflo");
+// }
+// setTimeout(hello,4000)
+
+function getData(dataId,getNesxtdata){
+  setTimeout(() => {
+    console.log("data",dataId);
+    if(getNesxtdata){
+      getNesxtdata();
+    }
+  }, 2000);
 }
-setTimeout(hello,4000)
+
+getData(1,()=>{
+  getData(2,()=>{
+    getData(3);
+  });
+})
